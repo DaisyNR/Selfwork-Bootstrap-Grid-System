@@ -1,0 +1,211 @@
+* {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+nav {
+    background-color:rgb(17, 20, 43);
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    color: rgb(230, 235, 233);
+    border: 5px dotted rgb(230, 235, 233);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+dt a {
+    text-decoration: none;
+    color: rgb(230, 235, 233);
+}
+
+dt a:hover {
+    font-size: larger;
+    text-shadow: 3px 3px 3px rgb(133, 178, 202);
+    transition: 0.4s;
+}
+
+.intestazione {
+    min-height: 100vh;
+    min-width: 100vh;
+    margin-top: 10vh;
+    background-image: url(./media/filmpic.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
+
+.titolo {
+    font-size: 70px;
+    font-weight: bolder;
+    letter-spacing: 4.5px;
+    color: rgb(17, 20, 43);
+    text-shadow: 3px 3px 3px rgb(230, 235, 233);
+    padding-right: 470px;
+    padding-bottom: 115px;
+    animation: anima-testo 3s;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(230, 235, 233)
+}
+
+.img {
+    height: 220px;
+    width: 150px;
+    padding-top: 0px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titolofilm {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.genere {
+    font-weight: lighter;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.container-fluid {
+    padding-top: 10px;
+}
+
+.sinossi {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.lavoraconnoi {
+    height: 30vh;
+    width: 60vh;
+    background-color: rgb(17, 20, 43);
+    color: rgb(146, 188, 205);
+    padding-top: 10px;
+    padding-left: 25px;
+    border: 6px dotted rgb(146, 188, 205);
+    position: relative;
+    left: 550px;
+    margin-top: 20px;
+    animation-name: flashing;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+body {
+    background-color: rgb(146, 188, 205);
+}
+
+#collaborazione {
+    text-align: start;
+    text-shadow: none;
+}
+
+footer{
+    background-color: rgb(12, 14, 29);
+    color: rgb(146, 188, 205);
+    margin-top: 20px;
+}
+
+.icone {
+    display: flex;
+    justify-content: end;
+}
+
+.listafooter {
+    font-weight: lighter;
+    line-height: 2px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+svg {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.color {
+    color: rgb(12, 14, 29);
+}
+
+@keyframes flashing {
+    0%{border: 8px dotted rgb(17, 20, 43)}
+    100%{border: 8px dotted rgb(233, 213, 2)}
+}
+
+@keyframes anima-testo {
+    0%{
+        transform: translateX(2000px);
+        scale: 0;
+    }
+}
+
+@media screen and (max-width:600px){
+    nav {
+        height: 300px;
+        max-width: 400px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 5px;
+        position: static;
+    }
+
+    .intestazione {
+        min-height: 50vh;
+        min-width: 50vh;
+        justify-content:right;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .titolo {
+        font-size: 40px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        padding-right: 31px;
+        padding-bottom: 21px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    article{
+        min-width: 80%;
+        text-align:justify;
+    }
+
+    .lavoraconnoi {
+        height: 33vh;
+        width: 60vh;
+        padding-top: 10px;
+        padding-left: 25px;
+        position: relative;
+        left: 15px;
+        right: 5px;
+        margin-top: 20px;
+    }
+}
