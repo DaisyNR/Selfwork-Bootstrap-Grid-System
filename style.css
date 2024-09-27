@@ -8,28 +8,19 @@
 nav {
     background-color:rgb(17, 20, 43);
     height: 10vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: end;
     color: rgb(230, 235, 233);
     border: 5px dotted rgb(230, 235, 233);
-    position: fixed;
-    top: 0px;
-    width: 100%;
+    z-index: 999;
 }
 
-dt a {
-    text-decoration: none;
-    color: rgb(230, 235, 233);
-}
 
-dt a:hover {
+li a:hover {
     font-size: larger;
     text-shadow: 3px 3px 3px rgb(133, 178, 202);
     transition: 0.4s;
 }
 
-.intestazione {
+header {
     min-height: 100vh;
     min-width: 100vh;
     margin-top: 10vh;
@@ -69,45 +60,16 @@ img:hover {
     transition: 0.5s;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-}
-
-.titolofilm {
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-}
 
 .genere {
     font-weight: lighter;
-    font-size: 20px;
-    padding-top: 10px;
 }
 
-.container-fluid {
-    padding-top: 10px;
-}
-
-.sinossi {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 .lavoraconnoi {
-    height: 30vh;
-    width: 60vh;
     background-color: rgb(17, 20, 43);
     color: rgb(146, 188, 205);
-    padding-top: 10px;
-    padding-left: 25px;
     border: 6px dotted rgb(146, 188, 205);
-    position: relative;
-    left: 550px;
-    margin-top: 20px;
     animation-name: flashing;
     animation-duration: 0.7s;
     animation-iteration-count: infinite;
@@ -119,11 +81,11 @@ body {
 }
 
 #collaborazione {
-    text-align: start;
     text-shadow: none;
+    font-size: 40px ;
 }
 
-footer{
+footer {
     background-color: rgb(12, 14, 29);
     color: rgb(146, 188, 205);
     margin-top: 20px;
@@ -131,24 +93,10 @@ footer{
 
 .icone {
     display: flex;
+    flex-direction: row;
     justify-content: end;
 }
 
-.listafooter {
-    font-weight: lighter;
-    line-height: 2px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-}
-
-svg {
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-.color {
-    color: rgb(12, 14, 29);
-}
 
 @keyframes flashing {
     0%{border: 8px dotted rgb(17, 20, 43)}
@@ -164,48 +112,30 @@ svg {
 
 @media screen and (max-width:600px){
     nav {
-        height: 300px;
-        max-width: 400px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 5px;
-        position: static;
+        max-width: 100%;
+        height: 12vh;
     }
 
-    .intestazione {
+    .navbar-collapse {
+        background-color: rgb(17, 20, 43);
+    }
+
+    header {
         min-height: 50vh;
-        min-width: 50vh;
-        justify-content:right;
-        align-items: center;
-        margin-top: 0px;
+        min-width: 50vh; 
     }
 
     .titolo {
         font-size: 40px;
         font-weight: bolder;
         letter-spacing: 2px;
-        padding-right: 31px;
-        padding-bottom: 21px;
+        padding-right: 38px;
+        padding-bottom: 40px;
     }
 
-    .row {
-        flex-direction: column;
-    }
 
-    article{
-        min-width: 80%;
-        text-align:justify;
+    .list-footer, .icone {
+        justify-content: start !important;
     }
-
-    .lavoraconnoi {
-        height: 33vh;
-        width: 60vh;
-        padding-top: 10px;
-        padding-left: 25px;
-        position: relative;
-        left: 15px;
-        right: 5px;
-        margin-top: 20px;
-    }
+ 
 }
